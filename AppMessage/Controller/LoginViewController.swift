@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class LoginViewController: UIViewController {
     
     private let scrollView:UIScrollView = {
@@ -98,12 +99,32 @@ class LoginViewController: UIViewController {
     @objc private func loginButtonTapped(){
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
+        let firebaseAuth = FirebaseAuthManager()
         guard let email = emailField.text, let password = passwordField.text,
               !email.isEmpty,!password.isEmpty,password.count >= 6 else{
                   alertUserLoginError()
                   return
               }
+        
+        firebaseAuth.loginAccountWith(email: email, password: password, completion: {(isLoggedIn,message) in
+            if isLoggedIn == true{
+                self.alertLoginUser("Success Login")
+                let vc = ConversationViewController()
+                let setData = UserDefaults.standard.set(isLoggedIn, forKey: "logged_in")
+                
+                self.navigationController?.pushViewController(vc, animated: true)
+            }else{
+                self.alertLoginUser(message)
+            }
+        })
     }
+    
+    func alertLoginUser(_ message:String){
+        let alert = UIAlertController(title: "User account", message: "\(message)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
+        present(alert, animated: false)
+    }
+    
     
     func alertUserLoginError(){
         let alert = UIAlertController(title: "Woops", message: "Please enter all information to Login", preferredStyle: .alert)

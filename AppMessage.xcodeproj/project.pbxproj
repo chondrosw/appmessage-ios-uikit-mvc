@@ -16,6 +16,7 @@
 		4D48A10927B8046D006B0F53 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D48A10827B8046D006B0F53 /* ProfileViewController.swift */; };
 		4D48A10C27B80E89006B0F53 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D48A10B27B80E89006B0F53 /* Extension.swift */; };
 		4D48A10E27B83BCB006B0F53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D48A10D27B83BCB006B0F53 /* GoogleService-Info.plist */; };
+		4D48A11127B841C0006B0F53 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D48A11027B841C0006B0F53 /* FirebaseAuthManager.swift */; };
 		4DA151F627B263C700D6AD54 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4DA151F527B263C700D6AD54 /* FirebaseAnalytics */; };
 		4DA151F827B263C700D6AD54 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4DA151F727B263C700D6AD54 /* FirebaseAnalyticsSwift-Beta */; };
 		4DA151FA27B263C700D6AD54 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4DA151F927B263C700D6AD54 /* FirebaseAuth */; };
@@ -76,6 +77,7 @@
 		4D48A10827B8046D006B0F53 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4D48A10B27B80E89006B0F53 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		4D48A10D27B83BCB006B0F53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D48A11027B841C0006B0F53 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		4DE8FB7127B25DD400897DAD /* AppMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE8FB7427B25DD400897DAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DE8FB7627B25DD400897DAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +176,14 @@
 			path = support;
 			sourceTree = "<group>";
 		};
+		4D48A10F27B841B1006B0F53 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4D48A11027B841C0006B0F53 /* FirebaseAuthManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		4DE8FB6827B25DD400897DAD = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +207,7 @@
 		4DE8FB7327B25DD400897DAD /* AppMessage */ = {
 			isa = PBXGroup;
 			children = (
+				4D48A10F27B841B1006B0F53 /* Service */,
 				4D48A10D27B83BCB006B0F53 /* GoogleService-Info.plist */,
 				4D48A10A27B80E70006B0F53 /* support */,
 				4D48A0FB27B7FE58006B0F53 /* Model */,
@@ -399,6 +410,7 @@
 				4D48A10927B8046D006B0F53 /* ProfileViewController.swift in Sources */,
 				4D48A10327B80437006B0F53 /* PhotoViewerViewController.swift in Sources */,
 				4DE8FB7527B25DD400897DAD /* AppDelegate.swift in Sources */,
+				4D48A11127B841C0006B0F53 /* FirebaseAuthManager.swift in Sources */,
 				4D48A10727B8045F006B0F53 /* NewConversationViewController.swift in Sources */,
 				4DE8FB7727B25DD400897DAD /* SceneDelegate.swift in Sources */,
 			);

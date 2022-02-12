@@ -8,6 +8,7 @@
 import UIKit
 import PhotosUI
 import AVKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
@@ -80,6 +81,7 @@ class RegisterViewController: UIViewController {
         button.titleLabel?.font = .systemFont(ofSize: 20,weight:.bold)
         return button
     }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,14 +130,33 @@ class RegisterViewController: UIViewController {
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
         fullnameField.resignFirstResponder()
+        let firebaseAuth = FirebaseAuthManager()
         guard let fullname = fullnameField.text,let email = emailField.text, let password = passwordField.text,
               !fullname.isEmpty,!email.isEmpty,!password.isEmpty,password.count >= 6 else{
-                  alertUserLoginError()
+                  alertUserRegisterError()
                   return
               }
+       
+        firebaseAuth.createAccountWith(email: email, password: password, completion: { (isRegistered,message) in
+            if isRegistered == true{
+                self.alertCreateUser(message)
+                let vc = ConversationViewController()
+                
+                self.navigationController?.pushViewController(vc, animated: false)
+            }else{
+                self.alertCreateUser(message)
+            }
+            
+        })
     }
     
-    func alertUserLoginError(){
+    func alertCreateUser(_ message:String){
+        let alert = UIAlertController(title: "User account", message: "\(message)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dissmiss", style: .cancel, handler: nil))
+        present(alert, animated: true)
+    }
+    
+    func alertUserRegisterError(){
         let alert = UIAlertController(title: "Woops", message: "Please enter all information to create account", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dissmiss", style: .cancel, handler: nil))
         present(alert, animated: true)

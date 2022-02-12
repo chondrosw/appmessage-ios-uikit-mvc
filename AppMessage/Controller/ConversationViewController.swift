@@ -17,6 +17,7 @@ class ConversationViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        navigationController?.navigationItem.hidesBackButton = true
         let isLoggedIn = UserDefaults.standard.bool(forKey: "logged_in")
         
         if !isLoggedIn{
