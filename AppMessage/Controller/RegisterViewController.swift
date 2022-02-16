@@ -131,6 +131,7 @@ class RegisterViewController: UIViewController {
         passwordField.resignFirstResponder()
         fullnameField.resignFirstResponder()
         let firebaseAuth = FirebaseAuthManager()
+        let databaseManager = DatabaseManager()
         guard let fullname = fullnameField.text,let email = emailField.text, let password = passwordField.text,
               !fullname.isEmpty,!email.isEmpty,!password.isEmpty,password.count >= 6 else{
                   alertUserRegisterError()
@@ -139,15 +140,21 @@ class RegisterViewController: UIViewController {
        
         firebaseAuth.createAccountWith(email: email, password: password, completion: { (isRegistered,message) in
             if isRegistered == true{
-                self.alertCreateUser(message)
-                let vc = ConversationViewController()
                 
+                let vc = TabBarViewController()
+                databaseManager.register(data: ChatAppUser(fullname: fullname, emailAddress: email, password: password, profilePictureUrl: ""))
+                self.navigationController?.navigationItem.hidesBackButton = true
+                self.navigationController?.navigationBar.isHidden = true
                 self.navigationController?.pushViewController(vc, animated: false)
+                
+                
             }else{
                 self.alertCreateUser(message)
             }
             
         })
+        
+        
     }
     
     func alertCreateUser(_ message:String){

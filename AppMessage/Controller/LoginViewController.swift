@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
@@ -62,6 +62,8 @@ class LoginViewController: UIViewController {
         button.titleLabel?.font = .systemFont(ofSize: 20,weight:.bold)
         return button
     }()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,7 +95,9 @@ class LoginViewController: UIViewController {
         passwordField.frame = CGRect(x: 24, y: emailField.bottom + 10, width: scrollView.width - 48, height: 52)
         loginButton.frame = CGRect(x: 24, y: passwordField.bottom + 24, width: scrollView.width - 48, height: 52)
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        print("\(FirebaseAuth.Auth.auth().currentUser)")
+    }
    
     
     @objc private func loginButtonTapped(){
@@ -106,15 +110,18 @@ class LoginViewController: UIViewController {
                   return
               }
         
-        firebaseAuth.loginAccountWith(email: email, password: password, completion: {(isLoggedIn,message) in
+        firebaseAuth.loginAccountWith(email: email, password: password, completion: {[weak self](isLoggedIn,message) in
+            guard let strongSelf = self else{
+                return
+            }
             if isLoggedIn == true{
-                self.alertLoginUser("Success Login")
+                self?.alertLoginUser("Success Login")
                 let vc = ConversationViewController()
                 let setData = UserDefaults.standard.set(isLoggedIn, forKey: "logged_in")
                 
-                self.navigationController?.pushViewController(vc, animated: true)
+                strongSelf.navigationController?.dismiss(animated: true, completion: nil)
             }else{
-                self.alertLoginUser(message)
+                self?.alertLoginUser(message)
             }
         })
     }

@@ -13,8 +13,8 @@ class FirebaseAuthManager{
     func createAccountWith(email:String,password:String,completion:@escaping(_ success:Bool,_ message:String)->Void){
         Auth.auth().createUser(withEmail: email, password: password, completion: {
             authResult,error in
-            
-            if authResult?.user != nil{
+            print(authResult)
+            if authResult != nil{
                 completion(true,"Selamat User berhasil daftar")
             }else{
                 print(error?.localizedDescription)
@@ -32,5 +32,16 @@ class FirebaseAuthManager{
                 completion(false,error!.localizedDescription)
             }
         })
+    }
+    
+    func logoutAccount(){
+        do{
+            try FirebaseAuth.Auth.auth().signOut()
+            UserDefaults.standard.removeObject(forKey: "logged_in")
+            
+        }catch  {
+            
+        }
+        
     }
 }

@@ -15,7 +15,6 @@
 		4D48A10727B8045F006B0F53 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D48A10627B8045F006B0F53 /* NewConversationViewController.swift */; };
 		4D48A10927B8046D006B0F53 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D48A10827B8046D006B0F53 /* ProfileViewController.swift */; };
 		4D48A10C27B80E89006B0F53 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D48A10B27B80E89006B0F53 /* Extension.swift */; };
-		4D48A10E27B83BCB006B0F53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D48A10D27B83BCB006B0F53 /* GoogleService-Info.plist */; };
 		4D48A11127B841C0006B0F53 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D48A11027B841C0006B0F53 /* FirebaseAuthManager.swift */; };
 		4DA151F627B263C700D6AD54 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4DA151F527B263C700D6AD54 /* FirebaseAnalytics */; };
 		4DA151F827B263C700D6AD54 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4DA151F727B263C700D6AD54 /* FirebaseAnalyticsSwift-Beta */; };
@@ -38,6 +37,8 @@
 		4DA1521A27B263C700D6AD54 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4DA1521927B263C700D6AD54 /* FirebaseStorage */; };
 		4DA1521C27B263C700D6AD54 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 4DA1521B27B263C700D6AD54 /* FirebaseStorageCombine-Community */; };
 		4DA1521E27B263C700D6AD54 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4DA1521D27B263C700D6AD54 /* FirebaseStorageSwift-Beta */; };
+		4DE70C4C27BCEFD600CFF8FB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE70C4B27BCEFD600CFF8FB /* TabBarViewController.swift */; };
+		4DE70C4E27BD48B600CFF8FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DE70C4D27BD48B600CFF8FB /* GoogleService-Info.plist */; };
 		4DE8FB7527B25DD400897DAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8FB7427B25DD400897DAD /* AppDelegate.swift */; };
 		4DE8FB7727B25DD400897DAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8FB7627B25DD400897DAD /* SceneDelegate.swift */; };
 		4DE8FB7927B25DD400897DAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8FB7827B25DD400897DAD /* ViewController.swift */; };
@@ -48,6 +49,8 @@
 		4DE8FB8F27B25DD500897DAD /* AppMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8FB8E27B25DD500897DAD /* AppMessageTests.swift */; };
 		4DE8FB9927B25DD600897DAD /* AppMessageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8FB9827B25DD600897DAD /* AppMessageUITests.swift */; };
 		4DE8FB9B27B25DD600897DAD /* AppMessageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8FB9A27B25DD600897DAD /* AppMessageUITestsLaunchTests.swift */; };
+		4DF6D96C27BC374200D28BDE /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6D96B27BC374200D28BDE /* DatabaseManager.swift */; };
+		4DF6D96E27BC379F00D28BDE /* ChatAppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF6D96D27BC379F00D28BDE /* ChatAppUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,8 +79,9 @@
 		4D48A10627B8045F006B0F53 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		4D48A10827B8046D006B0F53 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4D48A10B27B80E89006B0F53 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		4D48A10D27B83BCB006B0F53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D48A11027B841C0006B0F53 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		4DE70C4B27BCEFD600CFF8FB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		4DE70C4D27BD48B600CFF8FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DE8FB7127B25DD400897DAD /* AppMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE8FB7427B25DD400897DAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DE8FB7627B25DD400897DAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 		4DE8FB9427B25DD600897DAD /* AppMessageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppMessageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE8FB9827B25DD600897DAD /* AppMessageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMessageUITests.swift; sourceTree = "<group>"; };
 		4DE8FB9A27B25DD600897DAD /* AppMessageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMessageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4DF6D96B27BC374200D28BDE /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		4DF6D96D27BC379F00D28BDE /* ChatAppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,7 @@
 				4D48A10427B8044B006B0F53 /* VideoPlayerViewController.swift */,
 				4D48A10627B8045F006B0F53 /* NewConversationViewController.swift */,
 				4D48A10827B8046D006B0F53 /* ProfileViewController.swift */,
+				4DE70C4B27BCEFD600CFF8FB /* TabBarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,6 +171,7 @@
 		4D48A0FB27B7FE58006B0F53 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4DF6D96D27BC379F00D28BDE /* ChatAppUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				4D48A11027B841C0006B0F53 /* FirebaseAuthManager.swift */,
+				4DF6D96B27BC374200D28BDE /* DatabaseManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -207,8 +216,8 @@
 		4DE8FB7327B25DD400897DAD /* AppMessage */ = {
 			isa = PBXGroup;
 			children = (
+				4DE70C4D27BD48B600CFF8FB /* GoogleService-Info.plist */,
 				4D48A10F27B841B1006B0F53 /* Service */,
-				4D48A10D27B83BCB006B0F53 /* GoogleService-Info.plist */,
 				4D48A10A27B80E70006B0F53 /* support */,
 				4D48A0FB27B7FE58006B0F53 /* Model */,
 				4D48A0FA27B7FE52006B0F53 /* Controller */,
@@ -355,6 +364,7 @@
 			mainGroup = 4DE8FB6827B25DD400897DAD;
 			packageReferences = (
 				4DA151F427B263C700D6AD54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				4DE70C4F27BD5CC200CFF8FB /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 4DE8FB7227B25DD400897DAD /* Products */;
 			projectDirPath = "";
@@ -372,8 +382,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D48A10E27B83BCB006B0F53 /* GoogleService-Info.plist in Resources */,
 				4DE8FB8427B25DD500897DAD /* LaunchScreen.storyboard in Resources */,
+				4DE70C4E27BD48B600CFF8FB /* GoogleService-Info.plist in Resources */,
 				4DE8FB8127B25DD500897DAD /* Assets.xcassets in Resources */,
 				4DE8FB7C27B25DD400897DAD /* Main.storyboard in Resources */,
 			);
@@ -400,15 +410,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE70C4C27BCEFD600CFF8FB /* TabBarViewController.swift in Sources */,
 				4D48A0FF27B803F8006B0F53 /* LoginViewController.swift in Sources */,
 				4DE8FB7927B25DD400897DAD /* ViewController.swift in Sources */,
 				4D48A10127B80407006B0F53 /* RegisterViewController.swift in Sources */,
 				4D48A10C27B80E89006B0F53 /* Extension.swift in Sources */,
 				4D48A10527B8044B006B0F53 /* VideoPlayerViewController.swift in Sources */,
 				4DE8FB7F27B25DD400897DAD /* AppMessage.xcdatamodeld in Sources */,
+				4DF6D96C27BC374200D28BDE /* DatabaseManager.swift in Sources */,
 				4D48A0FD27B803E7006B0F53 /* ConversationViewController.swift in Sources */,
 				4D48A10927B8046D006B0F53 /* ProfileViewController.swift in Sources */,
 				4D48A10327B80437006B0F53 /* PhotoViewerViewController.swift in Sources */,
+				4DF6D96E27BC379F00D28BDE /* ChatAppUser.swift in Sources */,
 				4DE8FB7527B25DD400897DAD /* AppDelegate.swift in Sources */,
 				4D48A11127B841C0006B0F53 /* FirebaseAuthManager.swift in Sources */,
 				4D48A10727B8045F006B0F53 /* NewConversationViewController.swift in Sources */,
@@ -764,6 +777,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 8.0.0;
+			};
+		};
+		4DE70C4F27BD5CC200CFF8FB /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
